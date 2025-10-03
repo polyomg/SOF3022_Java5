@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="view(title, content)">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="${title}">TITLE</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header { font-size: 24px; font-weight: bold; }
+        nav { margin: 10px 0; }
+        article { margin: 20px 0; }
+        footer { font-size: 12px; color: gray; }
+        .lang { position: fixed; top: 5px; right: 5px; }
+    </style>
+</head>
+<body>
+<header>FPT Polytechnic</header>
+
+<!-- Menu -->
+<!-- Gọi menu.html -->
+<nav th:replace="menu :: nav"></nav>
+
+
+<!-- Nội dung động -->
+<article th:replace="${content}">CONTENT</article>
+
+<!-- Footer -->
+<footer>
+    <hr>
+    &copy; 2024. All rights reserved.
+</footer>
+</body>
+</html>

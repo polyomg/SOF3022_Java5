@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Template 1</title>
+</head>
+<body>
+<!-- replace: thay thế toàn bộ -->
+<div th:include="page17/fragments :: header" style="background: red"></div>
+
+<h2>Đây là nội dung của Template1</h2>
+
+<!-- include: chỉ chèn nội dung con -->
+<div th:replace="page17/fragments :: footer" style="background: blue"></div>
+</body>
+</html>

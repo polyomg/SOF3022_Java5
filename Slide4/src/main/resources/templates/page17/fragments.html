@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fragments</title>
+</head>
+<body>
+<!-- Fragment header -->
+<div th:fragment="header">
+    <h1>🌟 Demo Header Fragment 🌟</h1>
+    <hr>
+</div>
+
+<!-- Fragment footer -->
+<div th:fragment="footer">
+    <hr>
+    <p style="color: gray;">© 2025 - Demo Footer Fragment</p>
+</div>
+
+<!-- Fragment card -->
+<div th:fragment="card(title, content)">
+    <div style="border: 1px solid blue; padding: 10px; margin: 5px;">
+        <h3 th:text="${title}"></h3>
+        <p th:text="${content}"></p>
+    </div>
+</div>
+</body>
+</html>

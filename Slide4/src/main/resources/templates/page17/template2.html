@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Template 2</title>
+</head>
+<body>
+<div th:replace="page17/fragments :: header"></div>
+
+<h2>Template2 sử dụng fragment card</h2>
+
+<div th:replace="page17/fragments :: card('Thẻ A', 'Nội dung A')"></div>
+<div th:replace="page17/fragments :: card('Thẻ B', 'Nội dung B')"></div>
+
+<div th:include="page17/fragments :: footer"></div>
+</body>
+</html>
